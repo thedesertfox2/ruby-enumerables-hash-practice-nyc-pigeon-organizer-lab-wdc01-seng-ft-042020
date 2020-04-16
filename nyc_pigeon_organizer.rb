@@ -1,8 +1,8 @@
 require 'pry'
 def nyc_pigeon_organizer(data)
   hash = {}
-  data.each do |cgl, cgl_value|
-    cgl_value.each do |categories, names|
+  data.each_value do |cgl_value|
+    cgl_value.each_value do |names|
       names.each do |name|
         hash.store(name, {:color => [], :gender => [], :lives => []})
       end
